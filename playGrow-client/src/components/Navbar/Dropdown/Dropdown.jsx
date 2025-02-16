@@ -1,28 +1,21 @@
-
-
 import Hamburger from 'hamburger-react';
 import { useState } from 'react';
 
 const Dropdown = () => {
-   
   const [open, setOpen] = useState(false);
 
-console.log(open)
-
- 
-
   return (
-    <div >
-      {/* <Button sx={{color:'black',":hover":{color:"red",background:"none",":hover":{background:"none"}},transition: "color 0.3s ease, background 0.3s ease",}}> */}
-        <Hamburger toggled={open} toggle={setOpen}></Hamburger>
-      
-      <div className='mt-'>
-      
+    <div>
+      <div className="block"> 
+        <Hamburger
+          toggled={open}
+          toggle={setOpen}
+          size={30} // Default size
+          className="sm:size-20 md:size-24 lg:size-30" // Responsive sizes
+        />
       </div>
     </div>
   );
-
 };
 
 export default Dropdown;
-

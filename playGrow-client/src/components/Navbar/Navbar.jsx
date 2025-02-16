@@ -4,17 +4,21 @@ import Dropdown from "./Dropdown/Dropdown";
 import navLinks from "./NavLinks/NavLinks";
 import { CiSearch } from "react-icons/ci";
 import cartIcon from "../../assets/icons/cartIcon.png";
+import logoText from "../../assets/icons/logoText.png";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar py-0 px-8 lg:bg-[#F7F3F0] border-b border-[#ECCCB6] lg:border-none">
+      <div className="navbar py-0 px-6 md:px-8 lg:bg-[#F7F3F0] border-b border-[#ECCCB6] lg:border-none">
         <div className="navbar-start">
-          <div className="flex items-center gap-2 text-sm">
+          <div className="lg:flex items-center gap-2 text-sm hidden">
             <img src={mailImg} alt="" />
             <span>NEWSLETTER</span>
           </div>
+          <div className="flex lg:hidden h-8 md:h-10">
+            <img src={logoText} alt="" />
+          </div>
         </div>
-        <div className="navbar-center hidden lg:flex">{navLinks}</div>
+        <div className="navbar-center hidden lg:flex h-full">{navLinks}</div>
         <div className="navbar-end items-center ">
           {/* hidden items for small device */}
           <div className="hidden lg:flex">
@@ -34,7 +38,7 @@ const Navbar = () => {
                 <img src={cartIcon} className="h-10" alt="cart icon" />
                 <div className="text-xs px-1 rounded-full border-white bg-[#F8F4EC] border-4 absolute top-0 left-8">0</div>
               </div>
-              <div>CART $0.0</div>
+              <div className="text-xs md:text-sm">CART $0.0</div>
             </div>
             {/* dropdown content */}
             <Dropdown></Dropdown>
