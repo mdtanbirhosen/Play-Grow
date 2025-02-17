@@ -1,3 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+.active >span{
+    opacity: 1;
+}

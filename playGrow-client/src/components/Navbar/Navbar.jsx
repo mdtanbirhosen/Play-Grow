@@ -1,14 +1,14 @@
 import mailImg from "../../assets/icons/mailIcon.png";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import Dropdown from "./Dropdown/Dropdown";
-import navLinks from "./NavLinks/NavLinks";
 import { CiSearch } from "react-icons/ci";
 import cartIcon from "../../assets/icons/cartIcon.png";
 import logoText from "../../assets/icons/logoText.png";
+import NavLinks from "./NavLinks/NavLinks";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar py-0 px-6 md:px-8 lg:bg-[#F7F3F0] border-b border-[#ECCCB6] lg:border-none">
+      <div className="navbar py-0 px-6 md:px-8 lg:bg-[#F7F3F0] border-b border-[#ECCCB6] lg:border-none z-50">
         <div className="navbar-start">
           <div className="lg:flex items-center gap-2 text-sm hidden">
             <img src={mailImg} alt="" />
@@ -18,7 +18,7 @@ const Navbar = () => {
             <img src={logoText} alt="" />
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex h-full">{navLinks}</div>
+        <div className="navbar-center hidden lg:flex h-full"><NavLinks></NavLinks></div>
         <div className="navbar-end items-center ">
           {/* hidden items for small device */}
           <div className="hidden lg:flex">
