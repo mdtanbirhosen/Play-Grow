@@ -1,0 +1,176 @@
+import { FaAngleLeft } from "react-icons/fa";
+import { NavLink, useLocation } from "react-router-dom";
+
+const DropdownBlogLinks = () => {
+    const { pathname } = useLocation();
+    const currentlyHere =
+      pathname === "/kidsStore" ||
+      pathname === "/landing" ||
+      pathname === "/shopGrid" ||
+      pathname === "/babyShop";
+    return (
+        <div className="collapse collapse-arrow group">
+        <input type="checkbox" />
+        <div className="collapse-title  font-medium">
+          <div>HOME</div>
+          <div className="flex gap-2">
+            <span
+              className={`h-1 w-1 bg-none ${
+                currentlyHere ? "bg-orange-400" : "group-hover:bg-orange-400"
+              } rounded-full animate-pulse opacity-0 ${
+                currentlyHere ? "opacity-100" : "group-hover:opacity-100"
+              } [animation-delay:1500ms]`}
+            ></span>
+            <span
+              className={`h-1 w-1 bg-none ${
+                currentlyHere ? "bg-orange-400" : "group-hover:bg-orange-400"
+              } rounded-full animate-pulse opacity-0 ${
+                currentlyHere ? "opacity-100" : "group-hover:opacity-100"
+              } [animation-delay:1000ms]`}
+            ></span>
+            <span
+              className={`h-1 w-1 bg-none ${
+                currentlyHere ? "bg-orange-400" : "group-hover:bg-orange-400"
+              } rounded-full animate-pulse opacity-0 ${
+                currentlyHere ? "opacity-100" : "group-hover:opacity-100"
+              } [animation-delay:500ms]`}
+            ></span>
+            <span
+              className={`h-1 w-1 bg-none ${
+                currentlyHere ? "bg-orange-400" : "group-hover:bg-orange-400"
+              } rounded-full animate-pulse opacity-0 ${
+                currentlyHere ? "opacity-100" : "group-hover:opacity-100"
+              } [animation-delay:0ms]`}
+            ></span>
+          </div>
+        </div>
+        <div className="collapse-content">
+          <ul className="absolute hidden group-hover:block bg-base-100 top-[64px] z-10 w-52 p-4 shadow list-none transition-all duration-300">
+                  <li className="relative group/item my-2">
+                    <NavLink
+                      to="/shopList"
+                      className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                    >
+                      <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                      Shop List
+                    </NavLink>
+                  </li>
+                  <li className="relative group/item my-2">
+                    <NavLink
+                      to="/shopSingle"
+                      className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                    >
+                      <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                      Shop Single
+                    </NavLink>
+                  </li>
+          
+                  {/* Nested Dropdown */}
+                  <li className="relative">
+                    <div
+                      tabIndex={0}
+                      role="button"
+                      className="peer flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent cursor-pointer"
+                    >
+                      <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100"></span>
+                      Shop Layouts <span className="flex  justify-end"><FaAngleLeft /></span>
+                    </div>
+          
+                    {/* Submenu */}
+                    <ul className="absolute hidden peer-hover:block bg-base-100 right-full top-0 w-52 p-4 shadow list-none transition-all duration-300">
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/threeColumns"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Three Columns
+                        </NavLink>
+                      </li>
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/fourColumns"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Four Columns
+                        </NavLink>
+                      </li>
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/FiveColumnsWide"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Five Columns Wide
+                        </NavLink>
+                      </li>
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/SixColumnsWide"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Six Columns Wide
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
+          
+                  <li className="relative group/item my-2">
+                    <div
+                      tabIndex={0}
+                      role="button"
+                      className="peer flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent cursor-pointer w-full"
+                    >
+                      <span className="flex  justify-end"><FaAngleLeft /></span>
+                      Shop Pages <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100"></span>
+                    </div>
+          
+                    {/* Submenu */}
+                    <ul className="absolute hidden peer-hover:block bg-base-100 right-full top-0 w-52 p-4 shadow list-none transition-all duration-300">
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/threeColumns"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Three Columns
+                        </NavLink>
+                      </li>
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/fourColumns"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Four Columns
+                        </NavLink>
+                      </li>
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/FiveColumnsWide"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Five Columns Wide
+                        </NavLink>
+                      </li>
+                      <li className="relative group/item my-2">
+                        <NavLink
+                          to="/SixColumnsWide"
+                          className="flex items-center gap-2 hover:translate-x-2 transition-all duration-300 hover:bg-transparent"
+                        >
+                          <span className="h-1 w-1 bg-orange-400 rounded-full opacity-0 transition-opacity duration-300 group-hover/item:opacity-100"></span>
+                          Six Columns Wide
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+        </div>
+      </div>
+    );
+};
+
+export default DropdownBlogLinks;
