@@ -13,7 +13,7 @@ const slides = [
     title: "Adventure Awaits",
     description: "Find the best adventure tours.",
     image: "https://i.ibb.co.com/0VcsBz8g/Screenshot-2025-02-13-114909.png",
-    style: "bg-black bg-opacity-70 p-4 sm:p-6 rounded-full text-white",
+    style: "bg-white bg-opacity-70 p-4 sm:p-6 rounded-full text-gray-900",
   },
   {
     title: "Luxury Stays",
@@ -40,7 +40,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[650px] sm:h-[500px] overflow-hidden">
+    <div className="relative w-full h-[650px] sm:h-[500px] lg:h-[600px] overflow-hidden">
       <AnimatePresence>
         <motion.div
           key={index}
