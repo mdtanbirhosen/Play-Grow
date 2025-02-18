@@ -1,7 +1,8 @@
+import PropTypes from "prop-types"
 const Button = ({ children, className, type }) => {
   return (
     <div>
-      <button type={type} className={` ${className}`}>
+      <button type={type} className={` ${className} group`}>
         {children}
         <div className="flex gap-2">
           <span className="h-1 w-1 bg-none group-hover:bg-orange-400 rounded-full animate-pulse opacity-0 group-hover:opacity-100 [animation-delay:4000ms]"></span>
@@ -19,10 +20,10 @@ const Button = ({ children, className, type }) => {
   );
 };
 
+
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   type: PropTypes.oneOf(["submit", "button", "reset"]),
 };
-
 export default Button;
