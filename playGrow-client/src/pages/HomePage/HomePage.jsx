@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
+import CribsBaskets from "./components/Cribs&Baskets/CribsBaskets";
 import HappyCustomer from "./components/HappyCustomer/HappyCustomer";
 import IconicNavBar from "./components/IconicNavBar/IconicNavBar";
 import NewArrivals from "./components/NewArrivals/NewArrivals";
@@ -20,6 +21,9 @@ const HomePage = () => {
           <Banner></Banner>
         </section>
         <section className="max-w-7xl mx-auto">
+          <CribsBaskets></CribsBaskets>
+        </section>
+        <section className="max-w-7xl mx-auto">
           <ReadOurBlog></ReadOurBlog>
         </section>
         <section className="">
@@ -28,7 +32,7 @@ const HomePage = () => {
         <section>
           <NEWSLETTER></NEWSLETTER>
         </section>
-        <section>
+        <section className="max-w-7xl mx-auto">
           <NewArrivals></NewArrivals>
         </section>
       </main>

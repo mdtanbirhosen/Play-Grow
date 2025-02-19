@@ -14,18 +14,18 @@ const NEWSLETTER = () => {
 
     return (
         <div
-            className="h-[calc(100vh)] py-24 pl-52"
+            className="h-[calc(100vh)] py-24 lg:pl-52"
             style={{
                 backgroundImage: "url(https://i.ibb.co.com/XnJBnFx/Screenshot-2025-02-19-092607.png)",
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <div className="bg-white px-10 w-[416px] py-16">
-                <div className="pb-5 text-center">
+            <div className="bg-white lg:px-10  lg:w-[416px] mb-20 py-16">
+                <div className="lg:pb-5 text-center">
                     <h1 className="text-2xl ">NEWSLETTER</h1>
                     <h4 className="text-[#6E6E6E] pt-3">Risus viverra adipiscing at in tellus.</h4>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="p-2" onSubmit={handleSubmit(onSubmit)}>
                     <div className="my-5 space-y-2">
                         <input
                             type="text"

@@ -6,7 +6,7 @@ const HappyCustomer = () => {
             </div>
             <div>
                 <h1 className="text-center text-3xl pb-20">HAPPY CUSTOMERS</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 px-40 gap-20 ">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:px-40 gap-20 ">
                     <div className="text-center space-y-4">
                         <div className="flex gap-2 justify-center">
                             <div className="w-8 h-8">

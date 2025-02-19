@@ -85,13 +85,13 @@ const Banner = () => {
 
       {/* Navigation Arrows */}
       <button
-        className="absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-white   p-2 sm:p-2 rounded-full "
+        className="absolute cursor-pointer left-3 sm:left-5 top-1/2 transform -translate-y-1/2 text-white   p-2 sm:p-2 rounded-full "
         onClick={prevSlide}
       >
         <FaChevronLeft size={20} className="sm:size-24" />
       </button>
       <button
-        className="absolute right-3 sm:right-5 top-1/2 transform -translate-y-1/2 text-white   p-2 sm:p-3 rounded-full"
+        className="absolute cursor-pointer right-3 sm:right-5 top-1/2 transform -translate-y-1/2 text-white   p-2 sm:p-3 rounded-full"
         onClick={nextSlide}
       >
         <FaChevronRight size={20} className="sm:size-24" />
