@@ -3,7 +3,7 @@ import Button from "../../../../components/Button/Button";
 
 const ReadOurBlog = () => {
     return (
-        <div className="w-[90%] mx-auto lg:px-4 ">
+        <div className=" px-2 md:px-5">
             <div className="mb-10 mt-20 text-center">
                 <h1 className="text-3xl md:text-4xl font-bold mb-2">Read Our Blog</h1>
                 <p className="text-lg text-[#6E6E6E] max-w-2xl mx-auto">
