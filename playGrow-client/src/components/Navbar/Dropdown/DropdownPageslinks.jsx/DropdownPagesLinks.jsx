@@ -11,7 +11,7 @@ const DropdownPagesLinks = () => {
     <div className="collapse collapse-arrow group">
       <input type="checkbox" />
       <div className="collapse-title  font-medium">
-        <div>HOME</div>
+        <div>PAGES</div>
         <div className="flex gap-2">
           <span
             className={`h-1 w-1 bg-none ${

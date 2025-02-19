@@ -16,7 +16,7 @@ const Dropdown = () => {
         />
       </div>
       {open && (
-        <div className="absolute top-0 left-0 w-full -z-10 mt-16">
+        <div className="absolute top-0 left-0 z-50 w-full bg-white mt-16">
           <div>
             <DropdownLinks></DropdownLinks>
 
