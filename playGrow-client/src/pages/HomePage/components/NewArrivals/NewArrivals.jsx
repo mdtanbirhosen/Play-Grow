@@ -7,7 +7,7 @@ const NewArrivals = () => {
   const [carriages, setCarriages] = useState([]);
   useEffect(() => {
 
-    axios.get('http://localhost:5000/products?category=Carriage')
+    axios.get('https://v0-play-grow-server.vercel.app/products')
       .then(data => setCarriages(data.data))
   }, []);
   console.log(carriages.length)

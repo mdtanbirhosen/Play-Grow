@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className=" max-w-7xl mx-auto ">
       <div className=" py-32 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
-        
+
         {/* COMPANY SECTION */}
         <div>
           <h3 className="text-lg font-bold uppercase mb-3">Company</h3>
@@ -61,6 +61,14 @@ const Footer = () => {
           <p className="flex items-center gap-2 justify-center md:justify-start mt-2">
             <FaEnvelope /> playgrow@qodeinteractive.com
           </p>
+        </div>
+      </div>
+      <div className="flex mb-8 justify-between items-end">
+        <div className="flex items-end gap-5"><img className="w-[136px]" src="https://playgrow.qodeinteractive.com/wp-content/uploads/2022/12/footer-logo-img-1.png" alt="" />
+          <p>© 2023 Qode Interactive, All Rights Reserved</p>
+        </div>
+        <div>
+          <img className="w-[250px]" src="https://playgrow.qodeinteractive.com/wp-content/uploads/2022/12/footer-img-1.png" alt="" />
         </div>
       </div>
     </footer>
